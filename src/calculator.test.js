@@ -19,3 +19,10 @@ it("should summerize multiple numbers", () => {
 it("should allow \\n as a seperator", () => {
 	expect(add("1,2\n3")).toBe(6);
 });
+
+it("should throw an error if input contains negative number/s", () => {
+	function negativeInput(){
+		add("-2");
+	}
+	expect(negativeInput).toThrowError("Negatives not allowed: -2");
+});
