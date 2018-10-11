@@ -3,9 +3,9 @@ function add (numbers){
 	{
 		return 0;
 	}
-	if(numbers.includes(","))
+	if(numbers.includes("," || "\\n"))
 	{
-		var numArr = numbers.split(",");
+		var numArr = numbers.split(/,|\n/);
 		var total = 0;
 		for(var i = 0; i < numArr.length; i++){
 			total += +numArr[i];
