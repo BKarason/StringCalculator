@@ -1,15 +1,19 @@
-function add (number){
-	if (number === "")
+function add (numbers){
+	if (numbers === "")
 	{
 		return 0;
 	}
-	if(number.includes(","))
+	if(numbers.includes(","))
 	{
-		var numArr = number.split(",");
-		return +numArr[0] + +numArr[1];
+		var numArr = numbers.split(",");
+		var total = 0;
+		for(var i = 0; i < numArr.length; i++){
+			total += +numArr[i];
+		}
+		return total;
 	}
 	else
-		return +number;
+		return +numbers;
 }
 
 module.exports = add;
