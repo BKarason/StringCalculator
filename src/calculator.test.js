@@ -7,3 +7,7 @@ it("should return zero on an empty string", () => {
 it("should return number for string with one number", () => {
 	expect(add("5")).toBe(5);
 });
+
+it("should return sum of two numbers", () => {
+	expect(add("1,2")).toBe(3);
+});
