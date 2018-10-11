@@ -6,7 +6,7 @@ function add(numbers){
 	if(numbers.includes("," || "\\n"))
 	{
 		var numArr = numbers.split(/,|\n/);
-		//negCheck(numArr);
+		negCheck(numArr);
 		return sum(numArr);
 	}
 	if(numbers < 0){
@@ -24,7 +24,7 @@ function sum(numArr){
 	return total;
 }
 
-/*function negArrayPrint(array){
+function negArrayPrint(array){
 	var negNumbers = "";
 	for(var i = 0; i < array.length; i++){
 		if(i != array.length - 1){
@@ -49,6 +49,6 @@ function negCheck(numArr){
 		var negNumbersString = "Negatives not allowed: " + negArrayPrint(negNumbers);
 		throw negNumbersString;
 	}
-}*/
+}
 
 module.exports = add;

@@ -27,3 +27,9 @@ it("should throw an error if input contains negative number/s", () => {
 	expect(negativeInput).toThrowError("Negatives not allowed: -2");
 });
 
+it("should throw an error if input contains negative number/s", () => {
+	function negativeInput(){
+		add("1,-2,5,-6");
+	}
+	expect(negativeInput).toThrowError("Negatives not allowed: -2,-6");
+});
