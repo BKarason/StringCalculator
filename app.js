@@ -1,3 +1,3 @@
 const add = require("./src/calculator");
 
-console.log(add(""));
+console.log(add("5"));
