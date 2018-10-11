@@ -1,16 +1,17 @@
 function add(numbers){
-	if(numbers === "")
-	{
+	if(numbers === ""){
 		return 0;
 	}
-	if(numbers.includes("," || "\\n"))
-	{
+	if(numbers.includes("," || "\\n")){
 		var numArr = numbers.split(/,|\n/);
 		negCheck(numArr);
 		return sum(numArr);
 	}
 	if(numbers < 0){
 		throw "Negatives not allowed: " + numbers;
+	}
+	if(numbers > 1000){
+		return 0;
 	}
 	else
 		return +numbers;
@@ -44,8 +45,7 @@ function negCheck(numArr){
 			negNumbers[negNumbers.length] = numArr[i];
 		}
 	}
-	if(negNumbers.length > 0)
-	{
+	if(negNumbers.length > 0){
 		var negNumbersString = "Negatives not allowed: " + negArrayPrint(negNumbers);
 		throw negNumbersString;
 	}
