@@ -20,6 +20,9 @@ function add(numbers){
 function sum(numArr){
 	var total = 0;
 	for(var i = 0; i < numArr.length; i++){
+		if(numArr[i] > 1000){
+			continue;
+		}
 		total += +numArr[i];
 	}
 	return total;
