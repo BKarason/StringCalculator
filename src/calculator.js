@@ -8,10 +8,7 @@ function add(numbers){
 		return sum(numArr);
 	}
 	if(numbers.startsWith("//")){
-		var delimiter = numbers[2];
-		var slicedStr = numbers.slice(4,numbers.length);
-		var numArr = slicedStr.split(delimiter);
-		return sum(numArr);
+		return customDelimiter(numbers);
 	}
 	if(numbers < 0){
 		throw "Negatives not allowed: " + numbers;
@@ -59,5 +56,13 @@ function negCheck(numArr){
 		throw negNumbersString;
 	}
 }
+
+function customDelimiter(numbers){
+	var delimiter = numbers[2];
+	var slicedStr = numbers.slice(4,numbers.length);
+	var numArr = slicedStr.split(delimiter);
+	return sum(numArr);
+}
+
 
 module.exports = add;
