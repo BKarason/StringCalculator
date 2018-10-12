@@ -41,3 +41,7 @@ it("should ignore numbers bigger than 1000", () => {
 it("should ignore numbers bigger than 1000", () => {
 	expect(add("1001,2,1002")).toBe(2);
 });
+
+it("should allow '.' as a delimiter", () => {
+	expect(add("//.\n1.2")).toBe(3);
+});

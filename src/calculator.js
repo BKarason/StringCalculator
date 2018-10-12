@@ -7,6 +7,12 @@ function add(numbers){
 		negCheck(numArr);
 		return sum(numArr);
 	}
+	if(numbers.startsWith("//")){
+		var delimiter = numbers[2];
+		var slicedStr = numbers.slice(4,numbers.length);
+		var numArr = slicedStr.split(delimiter);
+		return sum(numArr);
+	}
 	if(numbers < 0){
 		throw "Negatives not allowed: " + numbers;
 	}
